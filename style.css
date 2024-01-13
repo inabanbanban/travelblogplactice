@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    display: block;
+}
+
+.readmore,
+.date,
+.side-text {
+    font-size: 0.875rem;
+}
+
+.text-center,
+h4 {
+    font-size: 1.125rem;
+}
+
+.copyright > p {
+    font-size: 0.75rem;
+}
+
+.text-center,
+.author-img {
+    margin: 0 0 30px;
+}
+
+.margin-b60 {
+    margin: 0 0 60px;
+}
+
+.main-center > div {
+    text-align: left;
+}
+
+.travelblog {
+    padding: 20px 16px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 0px 0px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0px; /*なぜかpadding-left: 40px;が入ってたのでリセット*/
+}
+
+.nav {
+    display: inline-block;
+    /* overflow-x: scroll;のバグ（？）により、
+    safariで表示する場合に下側がスクロールバーの分余白となる
+    */
+    padding: 8px 40px 8px 6px;
+}
+
+.maxw-1200 {
+    max-width: 1200px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pickup-box > div {
+    text-align: center;
+}
+.readmore {
+    display: inline-block;
+    text-align: center;
+    /*
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    border-bottomを使わなくてもIEを無視すればできちゃうんですね！
+    transition: color 10s, text-decoration 10s;
+    */
+    position: relative;
+    justify-content: center;
+}
+
+.readmore::after{
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: black;
+    bottom: 2px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+.readmore:hover::after {
+    visibility: hidden;
+    bottom: -2px;
+    opacity: 0;
+}
+
+.main-center {
+    text-align: center;
+    /*readmoreがinline-brock要素なので、親要素に↑を指定して中央揃え*/
+}
+
+.author-img {
+    border-radius: 50%;
+    width: 33%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.overline {
+    border-top: 1px solid #333;
+}
+
+.date-x {
+    margin: 20px;
+}
+
+.listitem {
+    margin: 15px;
+}
+
+footer {
+    background-color: #f7f7f7;
+}
+
+.list_triangle {
+    position: relative;
+    padding: 0px 0px 0px 1em;
+}
+.list_triangle::before {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border: 0.4em solid transparent;
+    border-left: 0.6em solid #333;
+    content: "";
+}
+
+.copyright {
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+/* ここに横幅が767px以下の時に発動するスタイルを記述 */
+
+main {
+    padding: 15px;
+}
+
+nav {
+    white-space: nowrap; /*行を折り返しさせないために指定*/
+    overflow-x: scroll; /*こいつがnav下余白の原因だあああ！*/
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.maintext {
+    padding: 10px 40px 10px 40px;
+}
+
+.footer {
+    padding: 50px 16px;
+}
+}
+
+@media screen and (min-width: 767px) {
+/* ここに横幅が767pxより大きい時に発動するスタイルを記述 */
+.pickup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 7.5px 60px;
+    padding: 50px 16px 0px;
+}
+
+.pickup-box {
+    width: 32%;
+}
+
+.main-center {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 7.5px 60px;
+    padding: 0px 16px;
+}
+
+.content-main {
+    width: 65%;
+}
+
+.content-sub {
+    width: 32%;
+    padding: 20px 0px;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding: 50px 16px;
+}
+
+.footer-item {
+    width: 30%;
+}
+}
