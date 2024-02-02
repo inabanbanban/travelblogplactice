@@ -3,13 +3,18 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: none;
     color: #333;
 }
 
-h1 {
-    font-size: 1.5rem;
+.text-center {
+    text-align: center;
 }
 
 h2 {
@@ -17,23 +22,27 @@ h2 {
     display: block;
 }
 
-.readmore,
-.date,
-.side-text {
-    font-size: 0.875rem;
+.font-15 {
+    font-size: 1.5rem;
 }
 
-.text-center,
-h4 {
+.font-1125 {
     font-size: 1.125rem;
 }
 
-.copyright > p {
+.font-0875 {
+    font-size: 0.875rem;
+}
+
+.font-075 {
     font-size: 0.75rem;
 }
 
-.text-center,
-.author-img {
+.margin15 {
+    margin: 15px;
+}
+
+.margin-b30 {
     margin: 0 0 30px;
 }
 
@@ -74,23 +83,9 @@ ul {
     margin: auto;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.pickup-box > div {
-    text-align: center;
-}
 .readmore {
     display: inline-block;
     text-align: center;
-    /*
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    border-bottomを使わなくてもIEを無視すればできちゃうんですね！
-    transition: color 10s, text-decoration 10s;
-    */
     position: relative;
     justify-content: center;
 }
@@ -114,22 +109,12 @@ img {
     opacity: 0;
 }
 
-.main-center {
-    text-align: center;
-    /*readmoreがinline-brock要素なので、親要素に↑を指定して中央揃え*/
-}
-
 .author-img {
     border-radius: 50%;
     width: 33%;
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.text-center {
-    text-align: center;
+    margin: 0 auto 30px auto;
 }
 
 .overline {
@@ -138,10 +123,7 @@ img {
 
 .date-x {
     margin: 20px;
-}
-
-.listitem {
-    margin: 15px;
+    font-size: 0.875rem;
 }
 
 footer {
@@ -152,6 +134,7 @@ footer {
     position: relative;
     padding: 0px 0px 0px 1em;
 }
+
 .list_triangle::before {
     position: absolute;
     top: 50%;
@@ -162,10 +145,6 @@ footer {
     border: 0.4em solid transparent;
     border-left: 0.6em solid #333;
     content: "";
-}
-
-.copyright {
-    text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -180,7 +159,7 @@ nav {
     overflow-x: scroll; /*こいつがnav下余白の原因だあああ！*/
 }
 
-h1 {
+.font-15 {
     margin-top: 50px;
 }
 
@@ -231,7 +210,6 @@ h1 {
 img{
     max-width: 100%;
 }
-
 
 .footer {
     display: flex;
